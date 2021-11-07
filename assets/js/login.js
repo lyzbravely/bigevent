@@ -30,41 +30,23 @@ $(function() {
         })
         // 监听注册事件
     $("#form_reg").on("submit", function(e) {
-            e.preventDefault();
+        e.preventDefault();
 
 
-            var data = { username: $(".user").val(), password: $(".pwd").val() };
-            // console.log(data);
-            $.post("/api/reguser", data, function(res) {
+        var data = { username: $(".user").val(), password: $(".pwd").val() };
+        // console.log(data);
+        $.post("/api/reguser", data, function(res) {
 
-                if (res.status !== 0) {
+            if (res.status !== 0) {
 
-                    return layer.msg(res.message);
-                }
-                layer.msg("注册成功,请登录!");
-                $("#link_login").click();
+                return layer.msg(res.message);
+            }
+            layer.msg("注册成功,请登录!");
+            $("#link_login").click();
 
-            })
         })
-        //监听登录事件
-        // $("#form_login").submit(function(e) {
-        //     e.preventDefault();
-        //     $.ajax({
-        //         url: 'http://api-breakingnews-web.itheima.net/api/login',
-        //         method: 'POST',
-        //         // 快速获取表单数据serialize()
-        //         data: $(this).serialize(),
-        //         success: function(res) {
-        //             console.log(res);
-        //             if (res.status !== 0) {
-        //                 return layer.msg(res.message)
-        //             }
-        //             layer.msg('登陆成功')
-        //             localStorage.setItem("token", res.token)
+    })
 
-    //         }
-    //     })
-    // })
     // 监听登录表单的提交事件
     $('#form_login').submit(function(e) {
         // 阻止默认提交行为
