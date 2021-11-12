@@ -1,0 +1,23 @@
+body {
+    padding: 15px;
+    background-color: #f2f3f5;
+}
+
+
+/* .ayui-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+#catebtn {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+
+#form-add,
+#form-edit {
+    padding-top: 40px;
+    padding-right: 30px;
+}
